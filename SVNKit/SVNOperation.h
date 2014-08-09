@@ -9,13 +9,17 @@
 #import <Foundation/Foundation.h>
 #import <svn_client.h>
 
-@class APRPool;
+@class APRPool, SVNError;
+
+typedef void (^SVNErrorHandler)(SVNError *error);
 
 @interface SVNOperation : NSOperation
 
 @property (nonatomic) svn_client_ctx_t *ctx;
 @property (nonatomic) APRPool *pool;
+@property (nonatomic, copy) SVNErrorHandler errorHandler;
 
 @property (nonatomic) dispatch_queue_t taskQ;
+-(void)_handleAndFreeError:(svn_error_t *)err;
 
 @end

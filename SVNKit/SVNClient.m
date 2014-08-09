@@ -7,11 +7,12 @@
 //
 
 #import "SVNClient.h"
+#import "SVNAuthenticationProvider.h"
+#import "SVNNotification.h"
 #import <svn_client.h>
 #import <svn_fs.h>
 
-static svn_wc_notify_func2_t svnkit_wc_notify_func2;
-static svn_client_get_commit_log3_t svnkit_log_msg_func3;
+static void wc_notify_func2(void *baton, const svn_wc_notify_t *notify, apr_pool_t *pool);
 
 @implementation SVNClient {
     svn_client_ctx_t *_ctx;
@@ -20,7 +21,7 @@ static svn_client_get_commit_log3_t svnkit_log_msg_func3;
 -(id)init {
     self = [super init];
     if (self) {
-        svn_error_t *err = nil;
+        svn_error_t *err;
         
         if ((err = svn_fs_initialize(self.pool))) {
             svn_error_clear(err);
@@ -42,14 +43,23 @@ static svn_client_get_commit_log3_t svnkit_log_msg_func3;
             return nil;
         }
         
-        _ctx->notify_func2 = svnkit_wc_notify_func2;
+        _ctx->notify_func2 = wc_notify_func2;
         _ctx->notify_baton2 = (__bridge void *)(self);
         
-        _ctx->log_msg_func3 = svnkit_log_msg_func3;
-        _ctx->log_msg_baton3 = NULL;
+        SVNAuthenticationProvider *authProv = [SVNAuthenticationProvider new];
+        svn_auth_open(&_ctx->auth_baton, authProv.providers, self.pool);
     }
-    
     return self;
 }
 
 @end
+
+static void wc_notify_func2(void *baton, const svn_wc_notify_t *notify, apr_pool_t *pool) {
+    SVNClient *client = (__bridge SVNClient *)(baton);
+    if ([client.delegate respondsToSelector:@selector(SVNClient:receivedNotification:)]) {
+        SVNNotification *notification = [[SVNNotification alloc] initWithStruct:notify];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [client.delegate SVNClient:client receivedNotification:notification];
+        });
+    }
+}

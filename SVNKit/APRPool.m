@@ -9,7 +9,9 @@
 #import "APRPool.h"
 #import "APRManager.h"
 
-@implementation APRPool
+@implementation APRPool {
+    APRPool *_parentPool;
+}
 
 -(void)dealloc {
     svn_pool_clear(_pool);
@@ -28,9 +30,14 @@
     self = [super init];
     if (self) {
         [APRManager sharedManager];
+        _parentPool = pool;
         _pool = svn_pool_create_ex(pool.pool, NULL);
     }
     return self;
+}
+
+-(APRPool *)createSubpool {
+    return [[APRPool alloc] initWithPool:self];
 }
 
 @end

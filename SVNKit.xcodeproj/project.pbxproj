@@ -29,6 +29,12 @@
 		9E9D541E1996841E006C1DB6 /* SVNRevision.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D541C1996841E006C1DB6 /* SVNRevision.m */; };
 		9E9D5421199685D1006C1DB6 /* SVNError.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9D541F199685D1006C1DB6 /* SVNError.h */; };
 		9E9D5422199685D1006C1DB6 /* SVNError.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D5420199685D1006C1DB6 /* SVNError.m */; };
+		CDEFCD7D1996AB930080F22C /* SVNNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCD7B1996AB930080F22C /* SVNNotification.h */; };
+		CDEFCD7E1996AB930080F22C /* SVNNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCD7C1996AB930080F22C /* SVNNotification.m */; };
+		CDEFCD821996B3EE0080F22C /* SVNAuthenticationProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCD801996B3EE0080F22C /* SVNAuthenticationProvider.h */; };
+		CDEFCD831996B3EE0080F22C /* SVNAuthenticationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCD811996B3EE0080F22C /* SVNAuthenticationProvider.m */; };
+		CDEFCD861996BA680080F22C /* SVNAuthenticationCredentials.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCD841996BA680080F22C /* SVNAuthenticationCredentials.h */; };
+		CDEFCD871996BA680080F22C /* SVNAuthenticationCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCD851996BA680080F22C /* SVNAuthenticationCredentials.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +77,12 @@
 		9E9D541C1996841E006C1DB6 /* SVNRevision.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNRevision.m; sourceTree = "<group>"; };
 		9E9D541F199685D1006C1DB6 /* SVNError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNError.h; sourceTree = "<group>"; };
 		9E9D5420199685D1006C1DB6 /* SVNError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNError.m; sourceTree = "<group>"; };
+		CDEFCD7B1996AB930080F22C /* SVNNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNNotification.h; sourceTree = "<group>"; };
+		CDEFCD7C1996AB930080F22C /* SVNNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNNotification.m; sourceTree = "<group>"; };
+		CDEFCD801996B3EE0080F22C /* SVNAuthenticationProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNAuthenticationProvider.h; sourceTree = "<group>"; };
+		CDEFCD811996B3EE0080F22C /* SVNAuthenticationProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNAuthenticationProvider.m; sourceTree = "<group>"; };
+		CDEFCD841996BA680080F22C /* SVNAuthenticationCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNAuthenticationCredentials.h; sourceTree = "<group>"; };
+		CDEFCD851996BA680080F22C /* SVNAuthenticationCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNAuthenticationCredentials.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +149,7 @@
 		9E9D53DE19967455006C1DB6 /* SVNKit */ = {
 			isa = PBXGroup;
 			children = (
+				CDEFCD7F1996B3120080F22C /* Authentication */,
 				9E9D54121996828F006C1DB6 /* Operations */,
 				9E9D54051996762B006C1DB6 /* APR */,
 				9E9D540419967618006C1DB6 /* Model */,
@@ -184,6 +197,8 @@
 				9E9D541C1996841E006C1DB6 /* SVNRevision.m */,
 				9E9D541F199685D1006C1DB6 /* SVNError.h */,
 				9E9D5420199685D1006C1DB6 /* SVNError.m */,
+				CDEFCD7B1996AB930080F22C /* SVNNotification.h */,
+				CDEFCD7C1996AB930080F22C /* SVNNotification.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -210,6 +225,17 @@
 			name = Operations;
 			sourceTree = "<group>";
 		};
+		CDEFCD7F1996B3120080F22C /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				CDEFCD801996B3EE0080F22C /* SVNAuthenticationProvider.h */,
+				CDEFCD811996B3EE0080F22C /* SVNAuthenticationProvider.m */,
+				CDEFCD841996BA680080F22C /* SVNAuthenticationCredentials.h */,
+				CDEFCD851996BA680080F22C /* SVNAuthenticationCredentials.m */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -220,8 +246,11 @@
 				9E9D5415199682CB006C1DB6 /* SVNOperation.h in Headers */,
 				9E9D541D1996841E006C1DB6 /* SVNRevision.h in Headers */,
 				9E9D541019967E29006C1DB6 /* SVNClient.h in Headers */,
+				CDEFCD861996BA680080F22C /* SVNAuthenticationCredentials.h in Headers */,
 				9E9D541919968305006C1DB6 /* SVNCheckoutOperation.h in Headers */,
 				9E9D540C199677AB006C1DB6 /* APRPool.h in Headers */,
+				CDEFCD821996B3EE0080F22C /* SVNAuthenticationProvider.h in Headers */,
+				CDEFCD7D1996AB930080F22C /* SVNNotification.h in Headers */,
 				9E9D5421199685D1006C1DB6 /* SVNError.h in Headers */,
 				9E9D54081996765B006C1DB6 /* APRManager.h in Headers */,
 			);
@@ -328,7 +357,10 @@
 				9E9D541A19968305006C1DB6 /* SVNCheckoutOperation.m in Sources */,
 				9E9D540D199677AB006C1DB6 /* APRPool.m in Sources */,
 				9E9D54091996765B006C1DB6 /* APRManager.m in Sources */,
+				CDEFCD831996B3EE0080F22C /* SVNAuthenticationProvider.m in Sources */,
+				CDEFCD7E1996AB930080F22C /* SVNNotification.m in Sources */,
 				9E9D5422199685D1006C1DB6 /* SVNError.m in Sources */,
+				CDEFCD871996BA680080F22C /* SVNAuthenticationCredentials.m in Sources */,
 				9E9D541E1996841E006C1DB6 /* SVNRevision.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,6 +489,14 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = "SVNKit/SVNKit-Info.plist";
+				LIBRARY_SEARCH_PATHS = /opt/local/lib;
+				OTHER_LDFLAGS = (
+					"-lapr-1",
+					"-lsvn_client-1",
+					"-lsvn_wc-1",
+					"-lsvn_fs-1",
+					"-lsvn_subr-1",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -478,6 +518,14 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = "SVNKit/SVNKit-Info.plist";
+				LIBRARY_SEARCH_PATHS = /opt/local/lib;
+				OTHER_LDFLAGS = (
+					"-lapr-1",
+					"-lsvn_client-1",
+					"-lsvn_wc-1",
+					"-lsvn_fs-1",
+					"-lsvn_subr-1",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -542,6 +590,7 @@
 				9E9D53FF19967456006C1DB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9E9D540019967456006C1DB6 /* Build configuration list for PBXNativeTarget "SVNKitTests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +599,7 @@
 				9E9D540219967456006C1DB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

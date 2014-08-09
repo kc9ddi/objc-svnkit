@@ -15,4 +15,6 @@
 
 -(id)initWithPool:(APRPool *)pool;
 
+-(APRPool *)createSubpool;
+
 @end

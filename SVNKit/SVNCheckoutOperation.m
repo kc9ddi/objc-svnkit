@@ -8,6 +8,7 @@
 
 #import "SVNCheckoutOperation.h"
 #import "SVNRevision.h"
+#import "SVNError.h"
 #import "APRPool.h"
 
 @implementation SVNCheckoutOperation
@@ -19,10 +20,12 @@
         svn_opt_revision_t peg_rev = _pegRevision.structValue;
         svn_opt_revision_t rev = _revision.structValue;
         
-        svn_error_t *err = svn_client_checkout3(&result_rev, [[_remoteURL absoluteString] UTF8String], [_localPath UTF8String], &peg_rev, &rev, _depth, _ignoreExternals, _allowUnversionedObstructions, self.ctx, self.pool.pool);
+        APRPool *subpool = [self.pool createSubpool];
+        
+        svn_error_t *err = svn_client_checkout3(&result_rev, [[_remoteURL absoluteString] UTF8String], [_localPath UTF8String], &peg_rev, &rev, _depth, _ignoreExternals, _allowUnversionedObstructions, self.ctx, subpool.pool);
         
         if (err != SVN_NO_ERROR) {
-            svn_error_clear(err);
+            [self _handleAndFreeError:err];
         }
     });
 }
