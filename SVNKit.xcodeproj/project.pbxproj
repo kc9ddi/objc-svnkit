@@ -15,6 +15,20 @@
 		9E9D53F219967456006C1DB6 /* SVNKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E9D53D519967455006C1DB6 /* SVNKit.framework */; };
 		9E9D53F819967456006C1DB6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E9D53F619967456006C1DB6 /* InfoPlist.strings */; };
 		9E9D53FA19967456006C1DB6 /* SVNKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D53F919967456006C1DB6 /* SVNKitTests.m */; };
+		9E9D54081996765B006C1DB6 /* APRManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9D54061996765B006C1DB6 /* APRManager.h */; };
+		9E9D54091996765B006C1DB6 /* APRManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D54071996765B006C1DB6 /* APRManager.m */; };
+		9E9D540C199677AB006C1DB6 /* APRPool.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9D540A199677AB006C1DB6 /* APRPool.h */; };
+		9E9D540D199677AB006C1DB6 /* APRPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D540B199677AB006C1DB6 /* APRPool.m */; };
+		9E9D541019967E29006C1DB6 /* SVNClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9D540E19967E29006C1DB6 /* SVNClient.h */; };
+		9E9D541119967E29006C1DB6 /* SVNClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D540F19967E29006C1DB6 /* SVNClient.m */; };
+		9E9D5415199682CB006C1DB6 /* SVNOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9D5413199682CB006C1DB6 /* SVNOperation.h */; };
+		9E9D5416199682CB006C1DB6 /* SVNOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D5414199682CB006C1DB6 /* SVNOperation.m */; };
+		9E9D541919968305006C1DB6 /* SVNCheckoutOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9D541719968305006C1DB6 /* SVNCheckoutOperation.h */; };
+		9E9D541A19968305006C1DB6 /* SVNCheckoutOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D541819968305006C1DB6 /* SVNCheckoutOperation.m */; };
+		9E9D541D1996841E006C1DB6 /* SVNRevision.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9D541B1996841E006C1DB6 /* SVNRevision.h */; };
+		9E9D541E1996841E006C1DB6 /* SVNRevision.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D541C1996841E006C1DB6 /* SVNRevision.m */; };
+		9E9D5421199685D1006C1DB6 /* SVNError.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9D541F199685D1006C1DB6 /* SVNError.h */; };
+		9E9D5422199685D1006C1DB6 /* SVNError.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D5420199685D1006C1DB6 /* SVNError.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +57,20 @@
 		9E9D53F519967456006C1DB6 /* SVNKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SVNKitTests-Info.plist"; sourceTree = "<group>"; };
 		9E9D53F719967456006C1DB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9E9D53F919967456006C1DB6 /* SVNKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVNKitTests.m; sourceTree = "<group>"; };
+		9E9D54061996765B006C1DB6 /* APRManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APRManager.h; sourceTree = "<group>"; };
+		9E9D54071996765B006C1DB6 /* APRManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRManager.m; sourceTree = "<group>"; };
+		9E9D540A199677AB006C1DB6 /* APRPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APRPool.h; sourceTree = "<group>"; };
+		9E9D540B199677AB006C1DB6 /* APRPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRPool.m; sourceTree = "<group>"; };
+		9E9D540E19967E29006C1DB6 /* SVNClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNClient.h; sourceTree = "<group>"; };
+		9E9D540F19967E29006C1DB6 /* SVNClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNClient.m; sourceTree = "<group>"; };
+		9E9D5413199682CB006C1DB6 /* SVNOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNOperation.h; sourceTree = "<group>"; };
+		9E9D5414199682CB006C1DB6 /* SVNOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNOperation.m; sourceTree = "<group>"; };
+		9E9D541719968305006C1DB6 /* SVNCheckoutOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNCheckoutOperation.h; sourceTree = "<group>"; };
+		9E9D541819968305006C1DB6 /* SVNCheckoutOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNCheckoutOperation.m; sourceTree = "<group>"; };
+		9E9D541B1996841E006C1DB6 /* SVNRevision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNRevision.h; sourceTree = "<group>"; };
+		9E9D541C1996841E006C1DB6 /* SVNRevision.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNRevision.m; sourceTree = "<group>"; };
+		9E9D541F199685D1006C1DB6 /* SVNError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNError.h; sourceTree = "<group>"; };
+		9E9D5420199685D1006C1DB6 /* SVNError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNError.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,9 +137,14 @@
 		9E9D53DE19967455006C1DB6 /* SVNKit */ = {
 			isa = PBXGroup;
 			children = (
+				9E9D54121996828F006C1DB6 /* Operations */,
+				9E9D54051996762B006C1DB6 /* APR */,
+				9E9D540419967618006C1DB6 /* Model */,
 				9E9D53E519967456006C1DB6 /* SVNKit.h */,
 				9E9D53E619967456006C1DB6 /* SVNKit.m */,
 				9E9D53DF19967455006C1DB6 /* Supporting Files */,
+				9E9D540E19967E29006C1DB6 /* SVNClient.h */,
+				9E9D540F19967E29006C1DB6 /* SVNClient.m */,
 			);
 			path = SVNKit;
 			sourceTree = "<group>";
@@ -144,6 +177,39 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9E9D540419967618006C1DB6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9E9D541B1996841E006C1DB6 /* SVNRevision.h */,
+				9E9D541C1996841E006C1DB6 /* SVNRevision.m */,
+				9E9D541F199685D1006C1DB6 /* SVNError.h */,
+				9E9D5420199685D1006C1DB6 /* SVNError.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9E9D54051996762B006C1DB6 /* APR */ = {
+			isa = PBXGroup;
+			children = (
+				9E9D54061996765B006C1DB6 /* APRManager.h */,
+				9E9D54071996765B006C1DB6 /* APRManager.m */,
+				9E9D540A199677AB006C1DB6 /* APRPool.h */,
+				9E9D540B199677AB006C1DB6 /* APRPool.m */,
+			);
+			name = APR;
+			sourceTree = "<group>";
+		};
+		9E9D54121996828F006C1DB6 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				9E9D5413199682CB006C1DB6 /* SVNOperation.h */,
+				9E9D5414199682CB006C1DB6 /* SVNOperation.m */,
+				9E9D541719968305006C1DB6 /* SVNCheckoutOperation.h */,
+				9E9D541819968305006C1DB6 /* SVNCheckoutOperation.m */,
+			);
+			name = Operations;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -151,6 +217,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E9D5415199682CB006C1DB6 /* SVNOperation.h in Headers */,
+				9E9D541D1996841E006C1DB6 /* SVNRevision.h in Headers */,
+				9E9D541019967E29006C1DB6 /* SVNClient.h in Headers */,
+				9E9D541919968305006C1DB6 /* SVNCheckoutOperation.h in Headers */,
+				9E9D540C199677AB006C1DB6 /* APRPool.h in Headers */,
+				9E9D5421199685D1006C1DB6 /* SVNError.h in Headers */,
+				9E9D54081996765B006C1DB6 /* APRManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +322,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E9D5416199682CB006C1DB6 /* SVNOperation.m in Sources */,
+				9E9D541119967E29006C1DB6 /* SVNClient.m in Sources */,
 				9E9D53E719967456006C1DB6 /* SVNKit.m in Sources */,
+				9E9D541A19968305006C1DB6 /* SVNCheckoutOperation.m in Sources */,
+				9E9D540D199677AB006C1DB6 /* APRPool.m in Sources */,
+				9E9D54091996765B006C1DB6 /* APRManager.m in Sources */,
+				9E9D5422199685D1006C1DB6 /* SVNError.m in Sources */,
+				9E9D541E1996841E006C1DB6 /* SVNRevision.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +450,12 @@
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SVNKit/SVNKit-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/opt/local/include/apr-1",
+					"/opt/local/include/subversion-1",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				INFOPLIST_FILE = "SVNKit/SVNKit-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
@@ -385,6 +471,12 @@
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SVNKit/SVNKit-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/opt/local/include/apr-1",
+					"/opt/local/include/subversion-1",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				INFOPLIST_FILE = "SVNKit/SVNKit-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
