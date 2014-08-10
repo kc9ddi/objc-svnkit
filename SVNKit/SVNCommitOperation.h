@@ -10,7 +10,7 @@
 
 @interface SVNCommitOperation : SVNOperation
 
-@property (nonatomic) NSSet *statusesToCommit;
+@property (nonatomic) NSArray *statusesToCommit;
 @property (nonatomic) svn_depth_t depth;
 @property (nonatomic) BOOL keepLocks;
 @property (nonatomic) BOOL keepChangeLists;
