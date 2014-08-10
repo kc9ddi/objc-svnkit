@@ -9,8 +9,7 @@
 #import "SVNCommitOperation.h"
 #import "SVNStatus.h"
 #import "SVNCommitInformation.h"
-
-static svn_error_t * commit_callback(const svn_commit_info_t *commit_info, void *baton, apr_pool_t *pool);
+#import "SVNCommitCallback.h"
 
 @implementation SVNCommitOperation
 
@@ -38,7 +37,7 @@ static svn_error_t * commit_callback(const svn_commit_info_t *commit_info, void 
         APR_ARRAY_PUSH(targets, const char *) = [status.path UTF8String];
     }
     
-    svn_error_t *err = svn_client_commit6(targets, _depth, _keepLocks, _keepChangeLists, _commitAsOperations, _includeExternals, _includeDirectoryExternals, NULL, NULL, commit_callback, (__bridge void *)(_commitResult), self.ctx, self.subpool.pool);
+    svn_error_t *err = svn_client_commit6(targets, _depth, _keepLocks, _keepChangeLists, _commitAsOperations, _includeExternals, _includeDirectoryExternals, NULL, NULL, svnkit_commit_callback, (__bridge void *)(_commitResult), self.ctx, self.subpool.pool);
     
     if (err != SVN_NO_ERROR) {
         [self _handleAndFreeError:err];
@@ -46,10 +45,3 @@ static svn_error_t * commit_callback(const svn_commit_info_t *commit_info, void 
 }
 
 @end
-
-static svn_error_t * commit_callback(const svn_commit_info_t *commit_info, void *baton, apr_pool_t *pool) {
-    NSMutableArray *list = (__bridge NSMutableArray *)(baton);
-    SVNCommitInformation *commitInfo = [[SVNCommitInformation alloc] initWithStruct:commit_info];
-    [list addObject:commitInfo];
-    return SVN_NO_ERROR;
-}
