@@ -55,6 +55,8 @@
 		CDEFCDAB1997729B0080F22C /* SVNDeleteOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCDA91997729B0080F22C /* SVNDeleteOperation.m */; };
 		CDEFCDAE199775990080F22C /* SVNCommitCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCDAC199775990080F22C /* SVNCommitCallback.h */; };
 		CDEFCDAF199775990080F22C /* SVNCommitCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCDAD199775990080F22C /* SVNCommitCallback.m */; };
+		CDEFCDB7199779C30080F22C /* SVNAddOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCDB5199779C30080F22C /* SVNAddOperation.h */; };
+		CDEFCDB8199779C30080F22C /* SVNAddOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCDB6199779C30080F22C /* SVNAddOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +125,8 @@
 		CDEFCDA91997729B0080F22C /* SVNDeleteOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNDeleteOperation.m; sourceTree = "<group>"; };
 		CDEFCDAC199775990080F22C /* SVNCommitCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNCommitCallback.h; sourceTree = "<group>"; };
 		CDEFCDAD199775990080F22C /* SVNCommitCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNCommitCallback.m; sourceTree = "<group>"; };
+		CDEFCDB5199779C30080F22C /* SVNAddOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNAddOperation.h; sourceTree = "<group>"; };
+		CDEFCDB6199779C30080F22C /* SVNAddOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNAddOperation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +282,8 @@
 				CDEFCDA11996FD0A0080F22C /* SVNCommitOperation.m */,
 				CDEFCDA81997729B0080F22C /* SVNDeleteOperation.h */,
 				CDEFCDA91997729B0080F22C /* SVNDeleteOperation.m */,
+				CDEFCDB5199779C30080F22C /* SVNAddOperation.h */,
+				CDEFCDB6199779C30080F22C /* SVNAddOperation.m */,
 			);
 			name = Operations;
 			sourceTree = "<group>";
@@ -316,6 +322,7 @@
 				CDEFCD9E1996F4AA0080F22C /* SVNInfo.h in Headers */,
 				9E9D541D1996841E006C1DB6 /* SVNRevision.h in Headers */,
 				CDEFCDAA1997729B0080F22C /* SVNDeleteOperation.h in Headers */,
+				CDEFCDB7199779C30080F22C /* SVNAddOperation.h in Headers */,
 				9E9D541019967E29006C1DB6 /* SVNClient.h in Headers */,
 				CDEFCD8E1996DE120080F22C /* SVNDirectoryEntry.h in Headers */,
 				CDEFCD9A1996F4360080F22C /* SVNInfoOperation.h in Headers */,
@@ -434,6 +441,7 @@
 				CDEFCD9B1996F4360080F22C /* SVNInfoOperation.m in Sources */,
 				9E9D5416199682CB006C1DB6 /* SVNOperation.m in Sources */,
 				9E9D541119967E29006C1DB6 /* SVNClient.m in Sources */,
+				CDEFCDB8199779C30080F22C /* SVNAddOperation.m in Sources */,
 				9E9D53E719967456006C1DB6 /* SVNKit.m in Sources */,
 				CDEFCDAB1997729B0080F22C /* SVNDeleteOperation.m in Sources */,
 				9E9D541A19968305006C1DB6 /* SVNCheckoutOperation.m in Sources */,
