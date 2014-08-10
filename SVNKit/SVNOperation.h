@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "APRPool.h"
 #import <svn_client.h>
 
 @class APRPool, SVNError;
@@ -19,7 +20,7 @@ typedef void (^SVNErrorHandler)(SVNError *error);
 @property (nonatomic) APRPool *pool;
 @property (nonatomic, copy) SVNErrorHandler errorHandler;
 
-@property (nonatomic) dispatch_queue_t taskQ;
 -(void)_handleAndFreeError:(svn_error_t *)err;
+-(APRPool *)subpool;
 
 @end

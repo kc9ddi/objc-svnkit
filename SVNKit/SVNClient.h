@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "APRPool.h"
 
-@class SVNClient, SVNNotification;
+@class SVNClient, SVNNotification, SVNOperation;
 
 @protocol SVNClientDelegate <NSObject>
 
@@ -21,5 +21,7 @@
 @interface SVNClient : APRPool
 
 @property (nonatomic) id<SVNClientDelegate> delegate;
+
+-(void)performOperation:(SVNOperation *)operation;
 
 @end

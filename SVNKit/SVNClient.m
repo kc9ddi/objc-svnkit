@@ -9,6 +9,7 @@
 #import "SVNClient.h"
 #import "SVNAuthenticationProvider.h"
 #import "SVNNotification.h"
+#import "SVNOperation.h"
 #import <svn_client.h>
 #import <svn_fs.h>
 
@@ -16,6 +17,7 @@ static void wc_notify_func2(void *baton, const svn_wc_notify_t *notify, apr_pool
 
 @implementation SVNClient {
     svn_client_ctx_t *_ctx;
+    NSOperationQueue *_operationQueue;
 }
 
 -(id)init {
@@ -48,8 +50,15 @@ static void wc_notify_func2(void *baton, const svn_wc_notify_t *notify, apr_pool
         
         SVNAuthenticationProvider *authProv = [SVNAuthenticationProvider new];
         svn_auth_open(&_ctx->auth_baton, authProv.providers, self.pool);
+        
+        _operationQueue = [NSOperationQueue new];
+        _operationQueue.name = @"svn operations";
     }
     return self;
+}
+
+-(void)performOperation:(SVNOperation *)operation {
+    [_operationQueue addOperation:operation];
 }
 
 @end
@@ -58,8 +67,6 @@ static void wc_notify_func2(void *baton, const svn_wc_notify_t *notify, apr_pool
     SVNClient *client = (__bridge SVNClient *)(baton);
     if ([client.delegate respondsToSelector:@selector(SVNClient:receivedNotification:)]) {
         SVNNotification *notification = [[SVNNotification alloc] initWithStruct:notify];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [client.delegate SVNClient:client receivedNotification:notification];
-        });
+        [client.delegate SVNClient:client receivedNotification:notification];
     }
 }

@@ -35,6 +35,14 @@
 		CDEFCD831996B3EE0080F22C /* SVNAuthenticationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCD811996B3EE0080F22C /* SVNAuthenticationProvider.m */; };
 		CDEFCD861996BA680080F22C /* SVNAuthenticationCredentials.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCD841996BA680080F22C /* SVNAuthenticationCredentials.h */; };
 		CDEFCD871996BA680080F22C /* SVNAuthenticationCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCD851996BA680080F22C /* SVNAuthenticationCredentials.m */; };
+		CDEFCD8A1996DA530080F22C /* SVNListOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCD881996DA530080F22C /* SVNListOperation.h */; };
+		CDEFCD8B1996DA530080F22C /* SVNListOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCD891996DA530080F22C /* SVNListOperation.m */; };
+		CDEFCD8E1996DE120080F22C /* SVNDirectoryEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCD8C1996DE120080F22C /* SVNDirectoryEntry.h */; };
+		CDEFCD8F1996DE120080F22C /* SVNDirectoryEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCD8D1996DE120080F22C /* SVNDirectoryEntry.m */; };
+		CDEFCD921996E47C0080F22C /* SVNStatusOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCD901996E47C0080F22C /* SVNStatusOperation.h */; };
+		CDEFCD931996E47C0080F22C /* SVNStatusOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCD911996E47C0080F22C /* SVNStatusOperation.m */; };
+		CDEFCD961996E81D0080F22C /* SVNStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCD941996E81D0080F22C /* SVNStatus.h */; };
+		CDEFCD971996E81D0080F22C /* SVNStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCD951996E81D0080F22C /* SVNStatus.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +91,14 @@
 		CDEFCD811996B3EE0080F22C /* SVNAuthenticationProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNAuthenticationProvider.m; sourceTree = "<group>"; };
 		CDEFCD841996BA680080F22C /* SVNAuthenticationCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNAuthenticationCredentials.h; sourceTree = "<group>"; };
 		CDEFCD851996BA680080F22C /* SVNAuthenticationCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNAuthenticationCredentials.m; sourceTree = "<group>"; };
+		CDEFCD881996DA530080F22C /* SVNListOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNListOperation.h; sourceTree = "<group>"; };
+		CDEFCD891996DA530080F22C /* SVNListOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNListOperation.m; sourceTree = "<group>"; };
+		CDEFCD8C1996DE120080F22C /* SVNDirectoryEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNDirectoryEntry.h; sourceTree = "<group>"; };
+		CDEFCD8D1996DE120080F22C /* SVNDirectoryEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNDirectoryEntry.m; sourceTree = "<group>"; };
+		CDEFCD901996E47C0080F22C /* SVNStatusOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNStatusOperation.h; sourceTree = "<group>"; };
+		CDEFCD911996E47C0080F22C /* SVNStatusOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNStatusOperation.m; sourceTree = "<group>"; };
+		CDEFCD941996E81D0080F22C /* SVNStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNStatus.h; sourceTree = "<group>"; };
+		CDEFCD951996E81D0080F22C /* SVNStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNStatus.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +215,10 @@
 				9E9D5420199685D1006C1DB6 /* SVNError.m */,
 				CDEFCD7B1996AB930080F22C /* SVNNotification.h */,
 				CDEFCD7C1996AB930080F22C /* SVNNotification.m */,
+				CDEFCD8C1996DE120080F22C /* SVNDirectoryEntry.h */,
+				CDEFCD8D1996DE120080F22C /* SVNDirectoryEntry.m */,
+				CDEFCD941996E81D0080F22C /* SVNStatus.h */,
+				CDEFCD951996E81D0080F22C /* SVNStatus.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -221,6 +241,10 @@
 				9E9D5414199682CB006C1DB6 /* SVNOperation.m */,
 				9E9D541719968305006C1DB6 /* SVNCheckoutOperation.h */,
 				9E9D541819968305006C1DB6 /* SVNCheckoutOperation.m */,
+				CDEFCD881996DA530080F22C /* SVNListOperation.h */,
+				CDEFCD891996DA530080F22C /* SVNListOperation.m */,
+				CDEFCD901996E47C0080F22C /* SVNStatusOperation.h */,
+				CDEFCD911996E47C0080F22C /* SVNStatusOperation.m */,
 			);
 			name = Operations;
 			sourceTree = "<group>";
@@ -243,14 +267,18 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDEFCD961996E81D0080F22C /* SVNStatus.h in Headers */,
 				9E9D5415199682CB006C1DB6 /* SVNOperation.h in Headers */,
 				9E9D541D1996841E006C1DB6 /* SVNRevision.h in Headers */,
 				9E9D541019967E29006C1DB6 /* SVNClient.h in Headers */,
+				CDEFCD8E1996DE120080F22C /* SVNDirectoryEntry.h in Headers */,
 				CDEFCD861996BA680080F22C /* SVNAuthenticationCredentials.h in Headers */,
 				9E9D541919968305006C1DB6 /* SVNCheckoutOperation.h in Headers */,
 				9E9D540C199677AB006C1DB6 /* APRPool.h in Headers */,
+				CDEFCD921996E47C0080F22C /* SVNStatusOperation.h in Headers */,
 				CDEFCD821996B3EE0080F22C /* SVNAuthenticationProvider.h in Headers */,
 				CDEFCD7D1996AB930080F22C /* SVNNotification.h in Headers */,
+				CDEFCD8A1996DA530080F22C /* SVNListOperation.h in Headers */,
 				9E9D5421199685D1006C1DB6 /* SVNError.h in Headers */,
 				9E9D54081996765B006C1DB6 /* APRManager.h in Headers */,
 			);
@@ -351,16 +379,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDEFCD8F1996DE120080F22C /* SVNDirectoryEntry.m in Sources */,
 				9E9D5416199682CB006C1DB6 /* SVNOperation.m in Sources */,
 				9E9D541119967E29006C1DB6 /* SVNClient.m in Sources */,
 				9E9D53E719967456006C1DB6 /* SVNKit.m in Sources */,
 				9E9D541A19968305006C1DB6 /* SVNCheckoutOperation.m in Sources */,
 				9E9D540D199677AB006C1DB6 /* APRPool.m in Sources */,
+				CDEFCD8B1996DA530080F22C /* SVNListOperation.m in Sources */,
+				CDEFCD931996E47C0080F22C /* SVNStatusOperation.m in Sources */,
 				9E9D54091996765B006C1DB6 /* APRManager.m in Sources */,
 				CDEFCD831996B3EE0080F22C /* SVNAuthenticationProvider.m in Sources */,
 				CDEFCD7E1996AB930080F22C /* SVNNotification.m in Sources */,
 				9E9D5422199685D1006C1DB6 /* SVNError.m in Sources */,
 				CDEFCD871996BA680080F22C /* SVNAuthenticationCredentials.m in Sources */,
+				CDEFCD971996E81D0080F22C /* SVNStatus.m in Sources */,
 				9E9D541E1996841E006C1DB6 /* SVNRevision.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
