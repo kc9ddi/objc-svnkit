@@ -47,6 +47,10 @@
 		CDEFCD9B1996F4360080F22C /* SVNInfoOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCD991996F4360080F22C /* SVNInfoOperation.m */; };
 		CDEFCD9E1996F4AA0080F22C /* SVNInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCD9C1996F4AA0080F22C /* SVNInfo.h */; };
 		CDEFCD9F1996F4AA0080F22C /* SVNInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCD9D1996F4AA0080F22C /* SVNInfo.m */; };
+		CDEFCDA21996FD0A0080F22C /* SVNCommitOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCDA01996FD0A0080F22C /* SVNCommitOperation.h */; };
+		CDEFCDA31996FD0A0080F22C /* SVNCommitOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCDA11996FD0A0080F22C /* SVNCommitOperation.m */; };
+		CDEFCDA619976D000080F22C /* SVNCommitInformation.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCDA419976D000080F22C /* SVNCommitInformation.h */; };
+		CDEFCDA719976D000080F22C /* SVNCommitInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCDA519976D000080F22C /* SVNCommitInformation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +111,10 @@
 		CDEFCD991996F4360080F22C /* SVNInfoOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNInfoOperation.m; sourceTree = "<group>"; };
 		CDEFCD9C1996F4AA0080F22C /* SVNInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNInfo.h; sourceTree = "<group>"; };
 		CDEFCD9D1996F4AA0080F22C /* SVNInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNInfo.m; sourceTree = "<group>"; };
+		CDEFCDA01996FD0A0080F22C /* SVNCommitOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNCommitOperation.h; sourceTree = "<group>"; };
+		CDEFCDA11996FD0A0080F22C /* SVNCommitOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNCommitOperation.m; sourceTree = "<group>"; };
+		CDEFCDA419976D000080F22C /* SVNCommitInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNCommitInformation.h; sourceTree = "<group>"; };
+		CDEFCDA519976D000080F22C /* SVNCommitInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNCommitInformation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +237,8 @@
 				CDEFCD951996E81D0080F22C /* SVNStatus.m */,
 				CDEFCD9C1996F4AA0080F22C /* SVNInfo.h */,
 				CDEFCD9D1996F4AA0080F22C /* SVNInfo.m */,
+				CDEFCDA419976D000080F22C /* SVNCommitInformation.h */,
+				CDEFCDA519976D000080F22C /* SVNCommitInformation.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -257,6 +267,8 @@
 				CDEFCD911996E47C0080F22C /* SVNStatusOperation.m */,
 				CDEFCD981996F4360080F22C /* SVNInfoOperation.h */,
 				CDEFCD991996F4360080F22C /* SVNInfoOperation.m */,
+				CDEFCDA01996FD0A0080F22C /* SVNCommitOperation.h */,
+				CDEFCDA11996FD0A0080F22C /* SVNCommitOperation.m */,
 			);
 			name = Operations;
 			sourceTree = "<group>";
@@ -291,9 +303,11 @@
 				9E9D540C199677AB006C1DB6 /* APRPool.h in Headers */,
 				CDEFCD921996E47C0080F22C /* SVNStatusOperation.h in Headers */,
 				CDEFCD821996B3EE0080F22C /* SVNAuthenticationProvider.h in Headers */,
+				CDEFCDA619976D000080F22C /* SVNCommitInformation.h in Headers */,
 				CDEFCD7D1996AB930080F22C /* SVNNotification.h in Headers */,
 				CDEFCD8A1996DA530080F22C /* SVNListOperation.h in Headers */,
 				9E9D5421199685D1006C1DB6 /* SVNError.h in Headers */,
+				CDEFCDA21996FD0A0080F22C /* SVNCommitOperation.h in Headers */,
 				9E9D54081996765B006C1DB6 /* APRManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,6 +407,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDEFCDA719976D000080F22C /* SVNCommitInformation.m in Sources */,
 				CDEFCD8F1996DE120080F22C /* SVNDirectoryEntry.m in Sources */,
 				CDEFCD9B1996F4360080F22C /* SVNInfoOperation.m in Sources */,
 				9E9D5416199682CB006C1DB6 /* SVNOperation.m in Sources */,
@@ -407,6 +422,7 @@
 				CDEFCD831996B3EE0080F22C /* SVNAuthenticationProvider.m in Sources */,
 				CDEFCD7E1996AB930080F22C /* SVNNotification.m in Sources */,
 				9E9D5422199685D1006C1DB6 /* SVNError.m in Sources */,
+				CDEFCDA31996FD0A0080F22C /* SVNCommitOperation.m in Sources */,
 				CDEFCD871996BA680080F22C /* SVNAuthenticationCredentials.m in Sources */,
 				CDEFCD971996E81D0080F22C /* SVNStatus.m in Sources */,
 				9E9D541E1996841E006C1DB6 /* SVNRevision.m in Sources */,
