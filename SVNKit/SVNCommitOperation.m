@@ -42,6 +42,8 @@
     if (err != SVN_NO_ERROR) {
         [self _handleAndFreeError:err];
     }
+    
+    self.ctx->log_msg_baton3 = NULL;
 }
 
 @end
