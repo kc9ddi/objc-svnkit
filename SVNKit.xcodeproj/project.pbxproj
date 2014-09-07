@@ -59,6 +59,8 @@
 		CDEFCDB8199779C30080F22C /* SVNAddOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCDB6199779C30080F22C /* SVNAddOperation.m */; };
 		CDEFCDBB19977AEE0080F22C /* SVNRevertOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCDB919977AEE0080F22C /* SVNRevertOperation.h */; };
 		CDEFCDBC19977AEE0080F22C /* SVNRevertOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCDBA19977AEE0080F22C /* SVNRevertOperation.m */; };
+		CDEFCDBF199780CE0080F22C /* SVNDiffOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCDBD199780CE0080F22C /* SVNDiffOperation.h */; };
+		CDEFCDC0199780CE0080F22C /* SVNDiffOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCDBE199780CE0080F22C /* SVNDiffOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +133,8 @@
 		CDEFCDB6199779C30080F22C /* SVNAddOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNAddOperation.m; sourceTree = "<group>"; };
 		CDEFCDB919977AEE0080F22C /* SVNRevertOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNRevertOperation.h; sourceTree = "<group>"; };
 		CDEFCDBA19977AEE0080F22C /* SVNRevertOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNRevertOperation.m; sourceTree = "<group>"; };
+		CDEFCDBD199780CE0080F22C /* SVNDiffOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNDiffOperation.h; sourceTree = "<group>"; };
+		CDEFCDBE199780CE0080F22C /* SVNDiffOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNDiffOperation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +294,8 @@
 				CDEFCDB6199779C30080F22C /* SVNAddOperation.m */,
 				CDEFCDB919977AEE0080F22C /* SVNRevertOperation.h */,
 				CDEFCDBA19977AEE0080F22C /* SVNRevertOperation.m */,
+				CDEFCDBD199780CE0080F22C /* SVNDiffOperation.h */,
+				CDEFCDBE199780CE0080F22C /* SVNDiffOperation.m */,
 			);
 			name = Operations;
 			sourceTree = "<group>";
@@ -341,6 +347,7 @@
 				CDEFCD7D1996AB930080F22C /* SVNNotification.h in Headers */,
 				CDEFCD8A1996DA530080F22C /* SVNListOperation.h in Headers */,
 				9E9D5421199685D1006C1DB6 /* SVNError.h in Headers */,
+				CDEFCDBF199780CE0080F22C /* SVNDiffOperation.h in Headers */,
 				CDEFCDA21996FD0A0080F22C /* SVNCommitOperation.h in Headers */,
 				CDEFCDAE199775990080F22C /* SVNCommitCallback.h in Headers */,
 				CDEFCDBB19977AEE0080F22C /* SVNRevertOperation.h in Headers */,
@@ -457,6 +464,7 @@
 				CDEFCD931996E47C0080F22C /* SVNStatusOperation.m in Sources */,
 				9E9D54091996765B006C1DB6 /* APRManager.m in Sources */,
 				CDEFCD9F1996F4AA0080F22C /* SVNInfo.m in Sources */,
+				CDEFCDC0199780CE0080F22C /* SVNDiffOperation.m in Sources */,
 				CDEFCD831996B3EE0080F22C /* SVNAuthenticationProvider.m in Sources */,
 				CDEFCD7E1996AB930080F22C /* SVNNotification.m in Sources */,
 				CDEFCDAF199775990080F22C /* SVNCommitCallback.m in Sources */,
