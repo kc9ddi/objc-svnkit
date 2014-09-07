@@ -24,19 +24,27 @@
     svn_error_t *err = svn_stream_open_unique(&outStream, &outPath, NULL, svn_io_file_del_on_pool_cleanup, self.subpool.pool, self.subpool.pool);
     if (err != SVN_NO_ERROR) {
         [self _handleAndFreeError:err];
-        return;
+        goto CLEANUP;
     }
-    
     
     err = svn_stream_open_unique(&errStream, &errPath, NULL, svn_io_file_del_on_pool_cleanup, self.subpool.pool, self.subpool.pool);
     if (err != SVN_NO_ERROR) {
         [self _handleAndFreeError:err];
-        return;
+        goto CLEANUP;
     }
     
     err = svn_client_diff6(NULL, [_path1 UTF8String], &rev1, [_path2 UTF8String], &rev2, NULL, _depth, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, APR_LOCALE_CHARSET, outStream, errStream, NULL, self.ctx, self.subpool.pool);
     if (err != SVN_NO_ERROR) {
         [self _handleAndFreeError:err];
+        goto CLEANUP;
+    }
+    
+CLEANUP:
+    if (outStream) {
+        svn_stream_close(outStream);
+    }
+    if (errStream) {
+        svn_stream_close(errStream);
     }
 }
 
