@@ -9,7 +9,7 @@
 #import "SVNStatusOperation.h"
 #import "SVNRevision.h"
 #import "SVNStatus.h"
-#import "APRPool.h"
+#import "SVNAPRPool.h"
 
 static svn_error_t * status_func(void *baton, char *path, const svn_client_status_t *status, apr_pool_t *scratch_pool);
 
@@ -28,7 +28,7 @@ static svn_error_t * status_func(void *baton, char *path, const svn_client_statu
     
     svn_opt_revision_t rev = _revision.structValue;
     
-    svn_error_t *err = svn_client_status5(&result_rev, self.ctx, [_path UTF8String], &rev, _depth, _getAll, _update, _noIgnore, _ignoreExternals, _depthAsSticky, NULL, (svn_client_status_func_t)status_func, (__bridge void *)(_statusResult), self.subpool.pool);
+    svn_error_t *err = svn_client_status5(&result_rev, self.ctx, [_path UTF8String], &rev, _depth, _getAll, _update, _noIgnore, _ignoreExternals, _depthAsSticky, NULL, (svn_client_status_func_t)status_func, (__bridge void *)(_statusResult), self.pool.pool);
     
     if (err != SVN_NO_ERROR) {
         [self _handleAndFreeError:err];

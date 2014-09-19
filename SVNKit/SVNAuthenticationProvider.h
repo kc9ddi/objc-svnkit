@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Epic. All rights reserved.
 //
 
-#import "APRPool.h"
+#import "SVNAPRPool.h"
 
 @class SVNAuthenticationProvider, SVNAuthenticationCredentials;
 
@@ -19,7 +19,7 @@
 
 @end
 
-@interface SVNAuthenticationProvider : APRPool
+@interface SVNAuthenticationProvider : SVNAPRPool
 
 @property (nonatomic, readonly) apr_array_header_t *providers;
 @property (nonatomic) id<SVNAuthenticationDataSource> dataSource;

@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 Epic. All rights reserved.
 //
 
-#import "APRPool.h"
+#import "SVNAPRPool.h"
 #import <svn_client.h>
 
-@interface SVNInfo : APRPool
+@interface SVNInfo : SVNAPRPool
 
 -(id)initWithStruct:(const svn_client_info2_t *)infoStruct path:(NSString *)path;
 

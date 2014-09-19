@@ -22,8 +22,8 @@
         return;
     }
     
-    svn_error_t *err = svn_client_checkout3(&result_rev, [[_remoteURL absoluteString] UTF8String], [_localPath UTF8String], &peg_rev, &rev, _depth, _ignoreExternals, _allowUnversionedObstructions, self.ctx, self.subpool.pool);
-    
+    svn_error_t *err = svn_client_checkout3(&result_rev, [[_remoteURL absoluteString] UTF8String], [_localPath UTF8String], &peg_rev, &rev, _depth, _ignoreExternals, _allowUnversionedObstructions, self.ctx, self.pool.pool);
+        
     if (err != SVN_NO_ERROR) {
         [self _handleAndFreeError:err];
     }

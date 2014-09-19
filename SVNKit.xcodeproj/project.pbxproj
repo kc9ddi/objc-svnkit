@@ -7,59 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E2317DB19C11D1400C2BA71 /* SVNListPropertiesOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E2317D919C11D1400C2BA71 /* SVNListPropertiesOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E2317DC19C11D1400C2BA71 /* SVNListPropertiesOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2317DA19C11D1400C2BA71 /* SVNListPropertiesOperation.m */; };
 		9E9D53D919967455006C1DB6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E9D53D819967455006C1DB6 /* Cocoa.framework */; };
 		9E9D53E319967455006C1DB6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E9D53E119967455006C1DB6 /* InfoPlist.strings */; };
-		9E9D53E719967456006C1DB6 /* SVNKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D53E619967456006C1DB6 /* SVNKit.m */; };
 		9E9D53EE19967456006C1DB6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E9D53ED19967456006C1DB6 /* XCTest.framework */; };
 		9E9D53EF19967456006C1DB6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E9D53D819967455006C1DB6 /* Cocoa.framework */; };
 		9E9D53F219967456006C1DB6 /* SVNKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E9D53D519967455006C1DB6 /* SVNKit.framework */; };
 		9E9D53F819967456006C1DB6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E9D53F619967456006C1DB6 /* InfoPlist.strings */; };
 		9E9D53FA19967456006C1DB6 /* SVNKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D53F919967456006C1DB6 /* SVNKitTests.m */; };
-		9E9D54081996765B006C1DB6 /* APRManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9D54061996765B006C1DB6 /* APRManager.h */; };
-		9E9D54091996765B006C1DB6 /* APRManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D54071996765B006C1DB6 /* APRManager.m */; };
-		9E9D540C199677AB006C1DB6 /* APRPool.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9D540A199677AB006C1DB6 /* APRPool.h */; };
-		9E9D540D199677AB006C1DB6 /* APRPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D540B199677AB006C1DB6 /* APRPool.m */; };
-		9E9D541019967E29006C1DB6 /* SVNClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9D540E19967E29006C1DB6 /* SVNClient.h */; };
+		9E9D54081996765B006C1DB6 /* SVNAPRManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9D54061996765B006C1DB6 /* SVNAPRManager.h */; };
+		9E9D54091996765B006C1DB6 /* SVNAPRManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D54071996765B006C1DB6 /* SVNAPRManager.m */; };
+		9E9D540C199677AB006C1DB6 /* SVNAPRPool.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9D540A199677AB006C1DB6 /* SVNAPRPool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E9D540D199677AB006C1DB6 /* SVNAPRPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D540B199677AB006C1DB6 /* SVNAPRPool.m */; };
+		9E9D541019967E29006C1DB6 /* SVNClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9D540E19967E29006C1DB6 /* SVNClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9E9D541119967E29006C1DB6 /* SVNClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D540F19967E29006C1DB6 /* SVNClient.m */; };
-		9E9D5415199682CB006C1DB6 /* SVNOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9D5413199682CB006C1DB6 /* SVNOperation.h */; };
+		9E9D5415199682CB006C1DB6 /* SVNOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9D5413199682CB006C1DB6 /* SVNOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9E9D5416199682CB006C1DB6 /* SVNOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D5414199682CB006C1DB6 /* SVNOperation.m */; };
-		9E9D541919968305006C1DB6 /* SVNCheckoutOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9D541719968305006C1DB6 /* SVNCheckoutOperation.h */; };
+		9E9D541919968305006C1DB6 /* SVNCheckoutOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9D541719968305006C1DB6 /* SVNCheckoutOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9E9D541A19968305006C1DB6 /* SVNCheckoutOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D541819968305006C1DB6 /* SVNCheckoutOperation.m */; };
-		9E9D541D1996841E006C1DB6 /* SVNRevision.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9D541B1996841E006C1DB6 /* SVNRevision.h */; };
+		9E9D541D1996841E006C1DB6 /* SVNRevision.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9D541B1996841E006C1DB6 /* SVNRevision.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9E9D541E1996841E006C1DB6 /* SVNRevision.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D541C1996841E006C1DB6 /* SVNRevision.m */; };
-		9E9D5421199685D1006C1DB6 /* SVNError.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9D541F199685D1006C1DB6 /* SVNError.h */; };
+		9E9D5421199685D1006C1DB6 /* SVNError.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9D541F199685D1006C1DB6 /* SVNError.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9E9D5422199685D1006C1DB6 /* SVNError.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D5420199685D1006C1DB6 /* SVNError.m */; };
-		CDEFCD7D1996AB930080F22C /* SVNNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCD7B1996AB930080F22C /* SVNNotification.h */; };
+		CDE001B219BCF2600011073A /* SVNKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9D53E519967456006C1DB6 /* SVNKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDE001B319BCF2750011073A /* SVNAuthentication.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE001AF19BCF1DA0011073A /* SVNAuthentication.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDE001B419BCF2750011073A /* SVNAPR.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE001B019BCF1E80011073A /* SVNAPR.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDE001B519BCF2750011073A /* SVNModel.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE001B119BCF1F60011073A /* SVNModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDE001BB19BCF5640011073A /* SVNOperations.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE001BA19BCF3F40011073A /* SVNOperations.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDEFCD7D1996AB930080F22C /* SVNNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCD7B1996AB930080F22C /* SVNNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDEFCD7E1996AB930080F22C /* SVNNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCD7C1996AB930080F22C /* SVNNotification.m */; };
-		CDEFCD821996B3EE0080F22C /* SVNAuthenticationProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCD801996B3EE0080F22C /* SVNAuthenticationProvider.h */; };
+		CDEFCD821996B3EE0080F22C /* SVNAuthenticationProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCD801996B3EE0080F22C /* SVNAuthenticationProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDEFCD831996B3EE0080F22C /* SVNAuthenticationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCD811996B3EE0080F22C /* SVNAuthenticationProvider.m */; };
-		CDEFCD861996BA680080F22C /* SVNAuthenticationCredentials.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCD841996BA680080F22C /* SVNAuthenticationCredentials.h */; };
+		CDEFCD861996BA680080F22C /* SVNAuthenticationCredentials.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCD841996BA680080F22C /* SVNAuthenticationCredentials.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDEFCD871996BA680080F22C /* SVNAuthenticationCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCD851996BA680080F22C /* SVNAuthenticationCredentials.m */; };
-		CDEFCD8A1996DA530080F22C /* SVNListOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCD881996DA530080F22C /* SVNListOperation.h */; };
+		CDEFCD8A1996DA530080F22C /* SVNListOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCD881996DA530080F22C /* SVNListOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDEFCD8B1996DA530080F22C /* SVNListOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCD891996DA530080F22C /* SVNListOperation.m */; };
-		CDEFCD8E1996DE120080F22C /* SVNDirectoryEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCD8C1996DE120080F22C /* SVNDirectoryEntry.h */; };
+		CDEFCD8E1996DE120080F22C /* SVNDirectoryEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCD8C1996DE120080F22C /* SVNDirectoryEntry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDEFCD8F1996DE120080F22C /* SVNDirectoryEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCD8D1996DE120080F22C /* SVNDirectoryEntry.m */; };
-		CDEFCD921996E47C0080F22C /* SVNStatusOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCD901996E47C0080F22C /* SVNStatusOperation.h */; };
+		CDEFCD921996E47C0080F22C /* SVNStatusOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCD901996E47C0080F22C /* SVNStatusOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDEFCD931996E47C0080F22C /* SVNStatusOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCD911996E47C0080F22C /* SVNStatusOperation.m */; };
-		CDEFCD961996E81D0080F22C /* SVNStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCD941996E81D0080F22C /* SVNStatus.h */; };
+		CDEFCD961996E81D0080F22C /* SVNStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCD941996E81D0080F22C /* SVNStatus.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDEFCD971996E81D0080F22C /* SVNStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCD951996E81D0080F22C /* SVNStatus.m */; };
-		CDEFCD9A1996F4360080F22C /* SVNInfoOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCD981996F4360080F22C /* SVNInfoOperation.h */; };
+		CDEFCD9A1996F4360080F22C /* SVNInfoOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCD981996F4360080F22C /* SVNInfoOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDEFCD9B1996F4360080F22C /* SVNInfoOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCD991996F4360080F22C /* SVNInfoOperation.m */; };
-		CDEFCD9E1996F4AA0080F22C /* SVNInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCD9C1996F4AA0080F22C /* SVNInfo.h */; };
+		CDEFCD9E1996F4AA0080F22C /* SVNInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCD9C1996F4AA0080F22C /* SVNInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDEFCD9F1996F4AA0080F22C /* SVNInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCD9D1996F4AA0080F22C /* SVNInfo.m */; };
-		CDEFCDA21996FD0A0080F22C /* SVNCommitOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCDA01996FD0A0080F22C /* SVNCommitOperation.h */; };
+		CDEFCDA21996FD0A0080F22C /* SVNCommitOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCDA01996FD0A0080F22C /* SVNCommitOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDEFCDA31996FD0A0080F22C /* SVNCommitOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCDA11996FD0A0080F22C /* SVNCommitOperation.m */; };
-		CDEFCDA619976D000080F22C /* SVNCommitInformation.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCDA419976D000080F22C /* SVNCommitInformation.h */; };
+		CDEFCDA619976D000080F22C /* SVNCommitInformation.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCDA419976D000080F22C /* SVNCommitInformation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDEFCDA719976D000080F22C /* SVNCommitInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCDA519976D000080F22C /* SVNCommitInformation.m */; };
-		CDEFCDAA1997729B0080F22C /* SVNDeleteOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCDA81997729B0080F22C /* SVNDeleteOperation.h */; };
+		CDEFCDAA1997729B0080F22C /* SVNDeleteOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCDA81997729B0080F22C /* SVNDeleteOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDEFCDAB1997729B0080F22C /* SVNDeleteOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCDA91997729B0080F22C /* SVNDeleteOperation.m */; };
 		CDEFCDAE199775990080F22C /* SVNCommitCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCDAC199775990080F22C /* SVNCommitCallback.h */; };
 		CDEFCDAF199775990080F22C /* SVNCommitCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCDAD199775990080F22C /* SVNCommitCallback.m */; };
-		CDEFCDB7199779C30080F22C /* SVNAddOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCDB5199779C30080F22C /* SVNAddOperation.h */; };
+		CDEFCDB7199779C30080F22C /* SVNAddOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCDB5199779C30080F22C /* SVNAddOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDEFCDB8199779C30080F22C /* SVNAddOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCDB6199779C30080F22C /* SVNAddOperation.m */; };
-		CDEFCDBB19977AEE0080F22C /* SVNRevertOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCDB919977AEE0080F22C /* SVNRevertOperation.h */; };
+		CDEFCDBB19977AEE0080F22C /* SVNRevertOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCDB919977AEE0080F22C /* SVNRevertOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDEFCDBC19977AEE0080F22C /* SVNRevertOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCDBA19977AEE0080F22C /* SVNRevertOperation.m */; };
-		CDEFCDBF199780CE0080F22C /* SVNDiffOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCDBD199780CE0080F22C /* SVNDiffOperation.h */; };
+		CDEFCDBF199780CE0080F22C /* SVNDiffOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEFCDBD199780CE0080F22C /* SVNDiffOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDEFCDC0199780CE0080F22C /* SVNDiffOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEFCDBE199780CE0080F22C /* SVNDiffOperation.m */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +80,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E2317D919C11D1400C2BA71 /* SVNListPropertiesOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNListPropertiesOperation.h; sourceTree = "<group>"; };
+		9E2317DA19C11D1400C2BA71 /* SVNListPropertiesOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNListPropertiesOperation.m; sourceTree = "<group>"; };
 		9E9D53D519967455006C1DB6 /* SVNKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SVNKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E9D53D819967455006C1DB6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		9E9D53DB19967455006C1DB6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,16 +91,15 @@
 		9E9D53E219967455006C1DB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9E9D53E419967455006C1DB6 /* SVNKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SVNKit-Prefix.pch"; sourceTree = "<group>"; };
 		9E9D53E519967456006C1DB6 /* SVNKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVNKit.h; sourceTree = "<group>"; };
-		9E9D53E619967456006C1DB6 /* SVNKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVNKit.m; sourceTree = "<group>"; };
 		9E9D53EC19967456006C1DB6 /* SVNKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SVNKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E9D53ED19967456006C1DB6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		9E9D53F519967456006C1DB6 /* SVNKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SVNKitTests-Info.plist"; sourceTree = "<group>"; };
 		9E9D53F719967456006C1DB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9E9D53F919967456006C1DB6 /* SVNKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVNKitTests.m; sourceTree = "<group>"; };
-		9E9D54061996765B006C1DB6 /* APRManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APRManager.h; sourceTree = "<group>"; };
-		9E9D54071996765B006C1DB6 /* APRManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRManager.m; sourceTree = "<group>"; };
-		9E9D540A199677AB006C1DB6 /* APRPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APRPool.h; sourceTree = "<group>"; };
-		9E9D540B199677AB006C1DB6 /* APRPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRPool.m; sourceTree = "<group>"; };
+		9E9D54061996765B006C1DB6 /* SVNAPRManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNAPRManager.h; sourceTree = "<group>"; };
+		9E9D54071996765B006C1DB6 /* SVNAPRManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNAPRManager.m; sourceTree = "<group>"; };
+		9E9D540A199677AB006C1DB6 /* SVNAPRPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNAPRPool.h; sourceTree = "<group>"; };
+		9E9D540B199677AB006C1DB6 /* SVNAPRPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNAPRPool.m; sourceTree = "<group>"; };
 		9E9D540E19967E29006C1DB6 /* SVNClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNClient.h; sourceTree = "<group>"; };
 		9E9D540F19967E29006C1DB6 /* SVNClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNClient.m; sourceTree = "<group>"; };
 		9E9D5413199682CB006C1DB6 /* SVNOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNOperation.h; sourceTree = "<group>"; };
@@ -103,6 +110,10 @@
 		9E9D541C1996841E006C1DB6 /* SVNRevision.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNRevision.m; sourceTree = "<group>"; };
 		9E9D541F199685D1006C1DB6 /* SVNError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNError.h; sourceTree = "<group>"; };
 		9E9D5420199685D1006C1DB6 /* SVNError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNError.m; sourceTree = "<group>"; };
+		CDE001AF19BCF1DA0011073A /* SVNAuthentication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVNAuthentication.h; sourceTree = "<group>"; };
+		CDE001B019BCF1E80011073A /* SVNAPR.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVNAPR.h; sourceTree = "<group>"; };
+		CDE001B119BCF1F60011073A /* SVNModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVNModel.h; sourceTree = "<group>"; };
+		CDE001BA19BCF3F40011073A /* SVNOperations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVNOperations.h; sourceTree = "<group>"; };
 		CDEFCD7B1996AB930080F22C /* SVNNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNNotification.h; sourceTree = "<group>"; };
 		CDEFCD7C1996AB930080F22C /* SVNNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNNotification.m; sourceTree = "<group>"; };
 		CDEFCD801996B3EE0080F22C /* SVNAuthenticationProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNAuthenticationProvider.h; sourceTree = "<group>"; };
@@ -206,7 +217,6 @@
 				9E9D54051996762B006C1DB6 /* APR */,
 				9E9D540419967618006C1DB6 /* Model */,
 				9E9D53E519967456006C1DB6 /* SVNKit.h */,
-				9E9D53E619967456006C1DB6 /* SVNKit.m */,
 				9E9D53DF19967455006C1DB6 /* Supporting Files */,
 				9E9D540E19967E29006C1DB6 /* SVNClient.h */,
 				9E9D540F19967E29006C1DB6 /* SVNClient.m */,
@@ -245,6 +255,7 @@
 		9E9D540419967618006C1DB6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CDE001B119BCF1F60011073A /* SVNModel.h */,
 				9E9D541B1996841E006C1DB6 /* SVNRevision.h */,
 				9E9D541C1996841E006C1DB6 /* SVNRevision.m */,
 				9E9D541F199685D1006C1DB6 /* SVNError.h */,
@@ -266,10 +277,11 @@
 		9E9D54051996762B006C1DB6 /* APR */ = {
 			isa = PBXGroup;
 			children = (
-				9E9D54061996765B006C1DB6 /* APRManager.h */,
-				9E9D54071996765B006C1DB6 /* APRManager.m */,
-				9E9D540A199677AB006C1DB6 /* APRPool.h */,
-				9E9D540B199677AB006C1DB6 /* APRPool.m */,
+				CDE001B019BCF1E80011073A /* SVNAPR.h */,
+				9E9D54061996765B006C1DB6 /* SVNAPRManager.h */,
+				9E9D54071996765B006C1DB6 /* SVNAPRManager.m */,
+				9E9D540A199677AB006C1DB6 /* SVNAPRPool.h */,
+				9E9D540B199677AB006C1DB6 /* SVNAPRPool.m */,
 			);
 			name = APR;
 			sourceTree = "<group>";
@@ -277,6 +289,7 @@
 		9E9D54121996828F006C1DB6 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
+				CDE001BA19BCF3F40011073A /* SVNOperations.h */,
 				CDEFCDB0199777360080F22C /* Support */,
 				9E9D541719968305006C1DB6 /* SVNCheckoutOperation.h */,
 				9E9D541819968305006C1DB6 /* SVNCheckoutOperation.m */,
@@ -296,6 +309,8 @@
 				CDEFCDBA19977AEE0080F22C /* SVNRevertOperation.m */,
 				CDEFCDBD199780CE0080F22C /* SVNDiffOperation.h */,
 				CDEFCDBE199780CE0080F22C /* SVNDiffOperation.m */,
+				9E2317D919C11D1400C2BA71 /* SVNListPropertiesOperation.h */,
+				9E2317DA19C11D1400C2BA71 /* SVNListPropertiesOperation.m */,
 			);
 			name = Operations;
 			sourceTree = "<group>";
@@ -303,6 +318,7 @@
 		CDEFCD7F1996B3120080F22C /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				CDE001AF19BCF1DA0011073A /* SVNAuthentication.h */,
 				CDEFCD801996B3EE0080F22C /* SVNAuthenticationProvider.h */,
 				CDEFCD811996B3EE0080F22C /* SVNAuthenticationProvider.m */,
 				CDEFCD841996BA680080F22C /* SVNAuthenticationCredentials.h */,
@@ -329,29 +345,35 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDEFCD961996E81D0080F22C /* SVNStatus.h in Headers */,
-				9E9D5415199682CB006C1DB6 /* SVNOperation.h in Headers */,
-				CDEFCD9E1996F4AA0080F22C /* SVNInfo.h in Headers */,
+				CDE001B219BCF2600011073A /* SVNKit.h in Headers */,
+				CDE001B319BCF2750011073A /* SVNAuthentication.h in Headers */,
+				CDE001B419BCF2750011073A /* SVNAPR.h in Headers */,
+				CDE001B519BCF2750011073A /* SVNModel.h in Headers */,
+				CDEFCD861996BA680080F22C /* SVNAuthenticationCredentials.h in Headers */,
+				CDEFCD821996B3EE0080F22C /* SVNAuthenticationProvider.h in Headers */,
+				CDEFCD8E1996DE120080F22C /* SVNDirectoryEntry.h in Headers */,
+				9E9D540C199677AB006C1DB6 /* SVNAPRPool.h in Headers */,
+				CDEFCD7D1996AB930080F22C /* SVNNotification.h in Headers */,
+				9E9D541919968305006C1DB6 /* SVNCheckoutOperation.h in Headers */,
+				CDE001BB19BCF5640011073A /* SVNOperations.h in Headers */,
+				9E9D541019967E29006C1DB6 /* SVNClient.h in Headers */,
+				CDEFCD8A1996DA530080F22C /* SVNListOperation.h in Headers */,
 				9E9D541D1996841E006C1DB6 /* SVNRevision.h in Headers */,
+				9E9D5421199685D1006C1DB6 /* SVNError.h in Headers */,
+				CDEFCD961996E81D0080F22C /* SVNStatus.h in Headers */,
+				CDEFCD9A1996F4360080F22C /* SVNInfoOperation.h in Headers */,
+				CDEFCD9E1996F4AA0080F22C /* SVNInfo.h in Headers */,
+				CDEFCD921996E47C0080F22C /* SVNStatusOperation.h in Headers */,
+				CDEFCDA21996FD0A0080F22C /* SVNCommitOperation.h in Headers */,
 				CDEFCDAA1997729B0080F22C /* SVNDeleteOperation.h in Headers */,
 				CDEFCDB7199779C30080F22C /* SVNAddOperation.h in Headers */,
-				9E9D541019967E29006C1DB6 /* SVNClient.h in Headers */,
-				CDEFCD8E1996DE120080F22C /* SVNDirectoryEntry.h in Headers */,
-				CDEFCD9A1996F4360080F22C /* SVNInfoOperation.h in Headers */,
-				CDEFCD861996BA680080F22C /* SVNAuthenticationCredentials.h in Headers */,
-				9E9D541919968305006C1DB6 /* SVNCheckoutOperation.h in Headers */,
-				9E9D540C199677AB006C1DB6 /* APRPool.h in Headers */,
-				CDEFCD921996E47C0080F22C /* SVNStatusOperation.h in Headers */,
-				CDEFCD821996B3EE0080F22C /* SVNAuthenticationProvider.h in Headers */,
-				CDEFCDA619976D000080F22C /* SVNCommitInformation.h in Headers */,
-				CDEFCD7D1996AB930080F22C /* SVNNotification.h in Headers */,
-				CDEFCD8A1996DA530080F22C /* SVNListOperation.h in Headers */,
-				9E9D5421199685D1006C1DB6 /* SVNError.h in Headers */,
 				CDEFCDBF199780CE0080F22C /* SVNDiffOperation.h in Headers */,
-				CDEFCDA21996FD0A0080F22C /* SVNCommitOperation.h in Headers */,
-				CDEFCDAE199775990080F22C /* SVNCommitCallback.h in Headers */,
 				CDEFCDBB19977AEE0080F22C /* SVNRevertOperation.h in Headers */,
-				9E9D54081996765B006C1DB6 /* APRManager.h in Headers */,
+				CDEFCDA619976D000080F22C /* SVNCommitInformation.h in Headers */,
+				9E2317DB19C11D1400C2BA71 /* SVNListPropertiesOperation.h in Headers */,
+				9E9D5415199682CB006C1DB6 /* SVNOperation.h in Headers */,
+				CDEFCDAE199775990080F22C /* SVNCommitCallback.h in Headers */,
+				9E9D54081996765B006C1DB6 /* SVNAPRManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,17 +478,17 @@
 				9E9D5416199682CB006C1DB6 /* SVNOperation.m in Sources */,
 				9E9D541119967E29006C1DB6 /* SVNClient.m in Sources */,
 				CDEFCDB8199779C30080F22C /* SVNAddOperation.m in Sources */,
-				9E9D53E719967456006C1DB6 /* SVNKit.m in Sources */,
 				CDEFCDAB1997729B0080F22C /* SVNDeleteOperation.m in Sources */,
 				9E9D541A19968305006C1DB6 /* SVNCheckoutOperation.m in Sources */,
-				9E9D540D199677AB006C1DB6 /* APRPool.m in Sources */,
+				9E9D540D199677AB006C1DB6 /* SVNAPRPool.m in Sources */,
 				CDEFCD8B1996DA530080F22C /* SVNListOperation.m in Sources */,
 				CDEFCD931996E47C0080F22C /* SVNStatusOperation.m in Sources */,
-				9E9D54091996765B006C1DB6 /* APRManager.m in Sources */,
+				9E9D54091996765B006C1DB6 /* SVNAPRManager.m in Sources */,
 				CDEFCD9F1996F4AA0080F22C /* SVNInfo.m in Sources */,
 				CDEFCDC0199780CE0080F22C /* SVNDiffOperation.m in Sources */,
 				CDEFCD831996B3EE0080F22C /* SVNAuthenticationProvider.m in Sources */,
 				CDEFCD7E1996AB930080F22C /* SVNNotification.m in Sources */,
+				9E2317DC19C11D1400C2BA71 /* SVNListPropertiesOperation.m in Sources */,
 				CDEFCDAF199775990080F22C /* SVNCommitCallback.m in Sources */,
 				9E9D5422199685D1006C1DB6 /* SVNError.m in Sources */,
 				CDEFCDA31996FD0A0080F22C /* SVNCommitOperation.m in Sources */,
@@ -547,6 +569,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -580,6 +603,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;
 			};
@@ -588,6 +612,7 @@
 		9E9D53FE19967456006C1DB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -598,7 +623,6 @@
 					"$(inherited)",
 					"/opt/local/include/apr-1",
 					"/opt/local/include/subversion-1",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = "SVNKit/SVNKit-Info.plist";
 				LIBRARY_SEARCH_PATHS = /opt/local/lib;
@@ -617,6 +641,7 @@
 		9E9D53FF19967456006C1DB6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -627,7 +652,6 @@
 					"$(inherited)",
 					"/opt/local/include/apr-1",
 					"/opt/local/include/subversion-1",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = "SVNKit/SVNKit-Info.plist";
 				LIBRARY_SEARCH_PATHS = /opt/local/lib;

@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Epic. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
-@interface SVNKit : NSObject
-
-@end
+#import "SVNModel.h"
+#import "SVNAPR.h"
+#import "SVNAuthentication.h"
+#import "SVNOperations.h"
+#import "SVNClient.h"

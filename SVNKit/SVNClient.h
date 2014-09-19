@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "APRPool.h"
+#import "SVNAPRPool.h"
 
 @class SVNClient, SVNNotification, SVNOperation;
+@protocol SVNAuthenticationDataSource;
 
 @protocol SVNClientDelegate <NSObject>
 
@@ -18,9 +19,11 @@
 
 @end
 
-@interface SVNClient : APRPool
+@interface SVNClient : SVNAPRPool
 
 @property (nonatomic) id<SVNClientDelegate> delegate;
+@property (nonatomic) id<SVNAuthenticationDataSource> authenticationDataSource;
+@property (nonatomic, readonly) NSOperationQueue *operationQueue;
 
 -(void)performOperation:(SVNOperation *)operation;
 

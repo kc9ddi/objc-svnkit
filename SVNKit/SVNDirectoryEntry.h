@@ -6,11 +6,12 @@
 //  Copyright (c) 2014 Epic. All rights reserved.
 //
 
-#import "APRPool.h"
+#import "SVNAPRPool.h"
 
-@interface SVNDirectoryEntry : APRPool
+@interface SVNDirectoryEntry : SVNAPRPool
 
 @property (nonatomic) NSString *name;
+@property (nonatomic) NSString *absolutePath;
 @property (nonatomic, readonly) NSString *urlEncodedName;
 @property (nonatomic, readonly) svn_node_kind_t kind;
 @property (nonatomic, readonly) NSUInteger size;

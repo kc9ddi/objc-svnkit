@@ -17,6 +17,6 @@
 
 -(svn_opt_revision_t)structValue;
 
-+(SVNRevision *)head;
++(SVNRevision *)revisionWithRevisionKind:(enum svn_opt_revision_kind)kind;
 
 @end

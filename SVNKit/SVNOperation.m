@@ -11,16 +11,24 @@
 
 @implementation SVNOperation
 
--(void)_handleAndFreeError:(svn_error_t *)err {
-    SVNError *error = [[SVNError alloc] initWithStruct:err];
-    if (_errorHandler) {
-        _errorHandler(error);
+@synthesize pool=_pool;
+
+-(SVNAPRPool *)pool {
+    if (!_pool) {
+        _pool = [[SVNAPRPool alloc] init];
     }
-    svn_error_clear(err);
+    return _pool;
 }
 
--(APRPool *)subpool {
-    return [_pool createSubpool];
+-(void)_handleAndFreeError:(svn_error_t *)err {
+    if (_errorHandler) {
+        svn_error_t *dup_err = svn_error_dup(err);
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            _errorHandler([[SVNError alloc] initWithStruct:dup_err]);
+            svn_error_clear(dup_err);
+        }];
+    }
+    svn_error_clear(err);
 }
 
 @end

@@ -6,13 +6,15 @@
 //  Copyright (c) 2014 Epic. All rights reserved.
 //
 
-#import "APRPool.h"
+#import "SVNAPRPool.h"
 #import <svn_wc.h>
 
-@interface SVNNotification : APRPool
+@interface SVNNotification : NSObject
 
 -(id)initWithStruct:(const svn_wc_notify_t *)notifyStruct;
 
 @property (nonatomic, readonly) NSString *path;
+@property (nonatomic, readonly) NSString *shortMessage;
+@property (nonatomic, readonly) NSString *longMessage;
 
 @end

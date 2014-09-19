@@ -28,9 +28,9 @@
     return revision;
 }
 
-+(SVNRevision *)head {
++(SVNRevision *)revisionWithRevisionKind:(enum svn_opt_revision_kind)kind {
     SVNRevision *rev = [SVNRevision new];
-    rev.kind = svn_opt_revision_head;
+    rev.kind = kind;
     return rev;
 }
 

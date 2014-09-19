@@ -1,5 +1,5 @@
 //
-//  APRManager.h
+//  SVNAPRManager.h
 //  SVNKit
 //
 //  Created by Patrick McDonnell on 8/9/14.
@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface APRManager : NSObject
+@interface SVNAPRManager : NSObject
 
-+(APRManager *)sharedManager;
++(SVNAPRManager *)sharedManager;
 
 @end

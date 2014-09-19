@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "APRPool.h"
+#import "SVNAPRPool.h"
 #import <svn_client.h>
 
 @class APRPool, SVNError;
@@ -17,10 +17,8 @@ typedef void (^SVNErrorHandler)(SVNError *error);
 @interface SVNOperation : NSOperation
 
 @property (nonatomic) svn_client_ctx_t *ctx;
-@property (nonatomic) APRPool *pool;
+@property (nonatomic, readonly) SVNAPRPool *pool;
 @property (nonatomic, copy) SVNErrorHandler errorHandler;
 
 -(void)_handleAndFreeError:(svn_error_t *)err;
--(APRPool *)subpool;
-
 @end

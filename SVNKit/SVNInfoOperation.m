@@ -26,7 +26,7 @@ static svn_error_t * info_func(void *baton, const char *abspath_or_url, const sv
     svn_opt_revision_t peg_rev = _pegRevision.structValue;
     svn_opt_revision_t rev = _revision.structValue;
     
-    svn_error_t *err = svn_client_info3([_pathOrURL UTF8String], &peg_rev, &rev, _depth, _fetchExcluded, _fetchActualOnly, NULL, info_func, (__bridge void *)(_infoResult), self.ctx, self.subpool.pool);
+    svn_error_t *err = svn_client_info3([_pathOrURL UTF8String], &peg_rev, &rev, _depth, _fetchExcluded, _fetchActualOnly, NULL, info_func, (__bridge void *)(_infoResult), self.ctx, self.pool.pool);
     
     if (err != SVN_NO_ERROR) {
         [self _handleAndFreeError:err];

@@ -1,19 +1,19 @@
 //
-//  APRManager.m
+//  SVNAPRManager.m
 //  SVNKit
 //
 //  Created by Patrick McDonnell on 8/9/14.
 //  Copyright (c) 2014 Epic. All rights reserved.
 //
 
-#import "APRManager.h"
-#import <apr_general.h>
-#import <svn_cmdline.h>
+#import "SVNAPRManager.h"
+#include <apr_general.h>
+#include <svn_cmdline.h>
 
-@implementation APRManager
+@implementation SVNAPRManager
 
-+(APRManager *)sharedManager {
-    static APRManager *sharedAPR;
++(SVNAPRManager *)sharedManager {
+    static SVNAPRManager *sharedAPR;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedAPR = [self new];

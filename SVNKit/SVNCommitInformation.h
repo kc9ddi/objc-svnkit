@@ -6,11 +6,11 @@
 //  Copyright (c) 2014 Epic. All rights reserved.
 //
 
-#import "APRPool.h"
+#import "SVNAPRPool.h"
 
 @class SVNRevision;
 
-@interface SVNCommitInformation : APRPool
+@interface SVNCommitInformation : SVNAPRPool
 
 @property (nonatomic, readonly) SVNRevision *revision;
 @property (nonatomic, readonly) NSString *serverDate;

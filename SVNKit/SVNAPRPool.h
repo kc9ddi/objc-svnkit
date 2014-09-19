@@ -1,5 +1,5 @@
 //
-//  APRPool.h
+//  SVNAPRPool.h
 //  SVNKit
 //
 //  Created by Patrick McDonnell on 8/9/14.
@@ -7,14 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <svn_pools.h>
+#include <svn_types.h>
+#include <svn_pools.h>
 
-@interface APRPool : NSObject
+@interface SVNAPRPool : NSObject
 
 @property (nonatomic) apr_pool_t *pool;
-
--(id)initWithPool:(APRPool *)pool;
-
--(APRPool *)createSubpool;
 
 @end

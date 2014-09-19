@@ -17,7 +17,15 @@ static void wc_notify_func2(void *baton, const svn_wc_notify_t *notify, apr_pool
 
 @implementation SVNClient {
     svn_client_ctx_t *_ctx;
-    NSOperationQueue *_operationQueue;
+    SVNAuthenticationProvider *_authProvider;
+}
+
+-(id<SVNAuthenticationDataSource>)authenticationDataSource {
+    return _authProvider.dataSource;
+}
+
+-(void)setAuthenticationDataSource:(id<SVNAuthenticationDataSource>)authenticationDataSource {
+    _authProvider.dataSource = authenticationDataSource;
 }
 
 -(id)init {
@@ -34,8 +42,8 @@ static void wc_notify_func2(void *baton, const svn_wc_notify_t *notify, apr_pool
             svn_error_clear(err);
             return nil;
         }
-        
-        if ((err = svn_client_create_context2(&_ctx, NULL, self.pool))) {
+         
+        if ((err = svn_client_create_context(&_ctx, self.pool))) {
             svn_error_clear(err);
             return nil;
         }
@@ -48,8 +56,8 @@ static void wc_notify_func2(void *baton, const svn_wc_notify_t *notify, apr_pool
         _ctx->notify_func2 = wc_notify_func2;
         _ctx->notify_baton2 = (__bridge void *)(self);
         
-        SVNAuthenticationProvider *authProv = [SVNAuthenticationProvider new];
-        svn_auth_open(&_ctx->auth_baton, authProv.providers, self.pool);
+        _authProvider = [SVNAuthenticationProvider new];
+        svn_auth_open(&_ctx->auth_baton, _authProvider.providers, self.pool);
         
         _operationQueue = [NSOperationQueue new];
         _operationQueue.name = @"svn operations";
@@ -58,6 +66,7 @@ static void wc_notify_func2(void *baton, const svn_wc_notify_t *notify, apr_pool
 }
 
 -(void)performOperation:(SVNOperation *)operation {
+    operation.ctx = _ctx;
     [_operationQueue addOperation:operation];
 }
 

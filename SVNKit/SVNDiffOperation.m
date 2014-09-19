@@ -18,33 +18,30 @@
     svn_opt_revision_t rev1 = _revision1.structValue;
     svn_opt_revision_t rev2 = _revision2.structValue;
     
-    svn_stream_t *outStream, *errStream;
-    const char *outPath, *errPath;
-    
-    svn_error_t *err = svn_stream_open_unique(&outStream, &outPath, NULL, svn_io_file_del_on_pool_cleanup, self.subpool.pool, self.subpool.pool);
-    if (err != SVN_NO_ERROR) {
-        [self _handleAndFreeError:err];
+    apr_file_t *outfile, *errfile;
+    apr_int32_t fileAccess = APR_FOPEN_READ | APR_FOPEN_WRITE | APR_FOPEN_CREATE | APR_FOPEN_TRUNCATE;
+    apr_status_t stat = apr_file_open(&outfile, "/tmp/macsvnDiff.txt", fileAccess, APR_FPROT_OS_DEFAULT, self.pool.pool);
+    if (stat != APR_SUCCESS) {
+        goto CLEANUP;
+    }
+    stat = apr_file_open(&errfile, "/tmp/macsvnDiffErr.txt", fileAccess, APR_FPROT_OS_DEFAULT, self.pool.pool);
+    if (stat != APR_SUCCESS) {
         goto CLEANUP;
     }
     
-    err = svn_stream_open_unique(&errStream, &errPath, NULL, svn_io_file_del_on_pool_cleanup, self.subpool.pool, self.subpool.pool);
-    if (err != SVN_NO_ERROR) {
-        [self _handleAndFreeError:err];
-        goto CLEANUP;
-    }
+    svn_error_t *err = svn_client_diff5(NULL, [_path1 UTF8String], &rev1, [_path2 UTF8String], &rev2, NULL, svn_depth_empty, FALSE, FALSE, FALSE, FALSE, FALSE, APR_LOCALE_CHARSET, outfile, errfile, FALSE, self.ctx, self.pool.pool);
     
-    err = svn_client_diff6(NULL, [_path1 UTF8String], &rev1, [_path2 UTF8String], &rev2, NULL, _depth, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, APR_LOCALE_CHARSET, outStream, errStream, NULL, self.ctx, self.subpool.pool);
     if (err != SVN_NO_ERROR) {
         [self _handleAndFreeError:err];
         goto CLEANUP;
     }
     
 CLEANUP:
-    if (outStream) {
-        svn_stream_close(outStream);
+    if (outfile) {
+        apr_file_close(outfile);
     }
-    if (errStream) {
-        svn_stream_close(errStream);
+    if (errfile) {
+        apr_file_close(errfile);
     }
 }
 

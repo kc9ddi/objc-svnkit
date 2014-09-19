@@ -15,7 +15,6 @@
 @property (nonatomic) BOOL keepLocks;
 @property (nonatomic) BOOL keepChangeLists;
 @property (nonatomic) BOOL commitAsOperations;
-@property (nonatomic) BOOL includeExternals;
 @property (nonatomic) BOOL includeDirectoryExternals;
 @property (nonatomic) NSString *commitMessage;
 

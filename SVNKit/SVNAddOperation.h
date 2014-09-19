@@ -14,7 +14,6 @@
 @property (nonatomic) svn_depth_t depth;
 @property (nonatomic) BOOL force;
 @property (nonatomic) BOOL noIgnore;
-@property (nonatomic) BOOL noAutoProperties;
 @property (nonatomic) BOOL addParents;
 
 @end

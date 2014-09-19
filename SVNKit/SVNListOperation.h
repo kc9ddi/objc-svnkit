@@ -16,7 +16,6 @@
 @property (nonatomic) SVNRevision *pegRevision;
 @property (nonatomic) SVNRevision *revision;
 @property (nonatomic) svn_depth_t depth;
-@property (nonatomic) BOOL includeExternals;
 
 @property (nonatomic, readonly) NSArray *listResult;
 

@@ -11,6 +11,8 @@
 #import "SVNCommitInformation.h"
 #import "SVNCommitCallback.h"
 
+static svn_client_get_commit_log3_t svnkit_log_msg_baton_3(const char **log_msg, const char **tmp_file, const apr_array_header_t *commit_items, void *baton, apr_pool_t *pool);
+
 @implementation SVNCommitOperation
 
 -(id)init {
@@ -30,6 +32,7 @@
         @throw [NSException exceptionWithName:@"Invalid File Count" reason:@"Too many files are being committed in a single operation" userInfo:nil];
     }
     
+    self.ctx->log_msg_func3 = svnkit_log_msg_baton_3;
     self.ctx->log_msg_baton3 = (void *)[_commitMessage UTF8String];
     
     apr_array_header_t *targets = apr_array_make(self.pool.pool, (int)_statusesToCommit.count, sizeof(const char *));
@@ -37,13 +40,19 @@
         APR_ARRAY_PUSH(targets, const char *) = [status.path UTF8String];
     }
     
-    svn_error_t *err = svn_client_commit6(targets, _depth, _keepLocks, _keepChangeLists, _commitAsOperations, _includeExternals, _includeDirectoryExternals, NULL, NULL, svnkit_commit_callback, (__bridge void *)(_commitResult), self.ctx, self.subpool.pool);
+    svn_error_t *err = svn_client_commit5(targets, _depth, _keepLocks, _keepChangeLists, _commitAsOperations, NULL, NULL, svnkit_commit_callback, (__bridge void *)(_commitResult), self.ctx, self.pool.pool);
     
     if (err != SVN_NO_ERROR) {
         [self _handleAndFreeError:err];
     }
     
+    self.ctx->log_msg_func3 = NULL;
     self.ctx->log_msg_baton3 = NULL;
 }
 
 @end
+
+svn_client_get_commit_log3_t svnkit_log_msg_baton_3(const char **log_msg, const char **tmp_file, const apr_array_header_t *commit_items, void *baton, apr_pool_t *pool) {
+    *log_msg = (const char *)baton;
+    return SVN_NO_ERROR;
+}
