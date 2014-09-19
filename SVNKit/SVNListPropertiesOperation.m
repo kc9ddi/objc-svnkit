@@ -23,6 +23,10 @@ static svn_error_t *svnkit_proplist_receiver(void *baton, const char *path, apr_
     svn_opt_revision_t peg_rev = _pegRevision.structValue;
     svn_opt_revision_t rev = _revision.structValue;
     
+    if (self.isCancelled) {
+        return;
+    }
+    
     svn_error_t *err = svn_client_proplist3([_target UTF8String], &peg_rev, &rev, _depth, NULL, svnkit_proplist_receiver, (__bridge void *)(_listPropertiesResult), self.ctx, self.pool.pool);
     
     if (err != SVN_NO_ERROR) {

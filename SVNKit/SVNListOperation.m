@@ -25,6 +25,10 @@ static svn_error_t *list_func(void *baton, const char *path, const svn_dirent_t 
     svn_opt_revision_t peg_rev = _pegRevision.structValue;
     svn_opt_revision_t rev = _revision.structValue;
     
+    if (self.isCancelled) {
+        return;
+    }
+    
     svn_error_t *err = svn_client_list2([_pathOrURL UTF8String], &peg_rev, &rev, _depth, SVN_DIRENT_ALL, FALSE, (svn_client_list_func_t)list_func, (__bridge void *)_listResult, self.ctx, self.pool.pool);
     
     if (err != SVN_NO_ERROR) {

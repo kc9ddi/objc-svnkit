@@ -17,14 +17,27 @@
     svn_opt_revision_t rev1 = _revision1.structValue;
     svn_opt_revision_t rev2 = _revision2.structValue;
     
+    if (self.isCancelled) {
+        return;
+    }
+    
     apr_file_t *outfile, *errfile;
     apr_int32_t fileAccess = APR_FOPEN_READ | APR_FOPEN_WRITE | APR_FOPEN_CREATE | APR_FOPEN_TRUNCATE;
     apr_status_t stat = apr_file_open(&outfile, "/tmp/macsvnDiff.txt", fileAccess, APR_FPROT_OS_DEFAULT, self.pool.pool);
     if (stat != APR_SUCCESS) {
         goto CLEANUP;
     }
+    
+    if (self.isCancelled) {
+        goto CLEANUP;
+    }
+    
     stat = apr_file_open(&errfile, "/tmp/macsvnDiffErr.txt", fileAccess, APR_FPROT_OS_DEFAULT, self.pool.pool);
     if (stat != APR_SUCCESS) {
+        goto CLEANUP;
+    }
+    
+    if (self.isCancelled) {
         goto CLEANUP;
     }
     

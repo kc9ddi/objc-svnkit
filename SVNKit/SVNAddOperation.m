@@ -12,6 +12,10 @@
 
 -(void)main {
 
+    if (self.isCancelled) {
+        return;
+    }
+    
     svn_error_t *err = svn_client_add4([_pathToAdd UTF8String], _depth, _force, _noIgnore, _addParents, self.ctx, self.pool.pool);
     
     if (err != SVN_NO_ERROR) {
